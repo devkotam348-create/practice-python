@@ -37,3 +37,4 @@ e1.setTime(new_time)
 print(f'The updated intrest is : {e1.simpleIntrest()}')
          
 
+
