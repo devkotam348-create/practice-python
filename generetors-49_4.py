@@ -2,12 +2,11 @@
 
 a = [2,4,6,7,8,9]
 
-#it = iter(a)
+it = iter(a)
 while True:
-    # try:
-    #     print(next(it), end = ' ')
-    # except StopIteration:
-    #     break
-    it = iter(a)
-    print(next(itt))
+    try:
+        print(next(it), end = ' ')
+    except StopIteration:
+        break
+
 
