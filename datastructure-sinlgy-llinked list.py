@@ -82,13 +82,41 @@ class SLL:
         if self.start is None:
             raise ValueError('List is empty')
         self.start= self.start.next
-        
+##11. In class SLL, define a method delete_item()to delete specified element firm the list
+
+    def delete_item(self, item):
+        prev = None
+        current = self.start
+        while current is not None:
+            if current.item == item:
+                if prev is None:
+                    self.start = current.next
+                else:
+                    prev.next = current.next
+                break
+            prev = current
+            current = current.next
+        raise ValueError("not found")
+    ##12 In class SLL, define a method delete_last() to delete last element form the list
+    def delete_last(self):
+        prev = None
+        current = self.start 
+        if current is None:
+            raise ValueError("list is empty")
+        elif current.next == None:
+            self.start = None
+            return
+        while current.next is not None:
+            prev = current
+            current = current.next
+        prev.next = None
+                
+            
         
      
         
 
             
-
             
 
 e = SLL()
@@ -101,5 +129,5 @@ print(e.Show_data())
 for x in e:
     print(x)
 e.delete_first ()
-print(e.Show_data())
+print(e.Show_data()) 
 
