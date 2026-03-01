@@ -33,7 +33,8 @@ def store_numbers(filename):
         return numbers
 
 print(store_numbers('name.txt'))
-            
+
+
         
        
         
