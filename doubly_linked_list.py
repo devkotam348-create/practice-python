@@ -119,12 +119,22 @@ class DLL:
             return None
         self.tail = self.tail.prev
         self.tail.next = None
-# #12. In a class DLL, define a method delete_item() to delete specified element form the list
-#     def delete_item(self,item):
-#         current = self.head
-#         if current is not None:
-#             while current is not None:
-#                 if current.item == item:
+#12. In a class DLL, define a method delete_item() to delete specified element form the list
+    def delete_item(self,item):
+        current = self.head
+        while current is not None:
+            if current.item == item:
+                if current== self.head:
+                    self.delete_first()
+                elif current == self.tail:
+                    self.delete_last()
+                else:
+                    current.prev.next = current.next
+                    current.next.prev = current.prev
+                    return
+            current = current.next
+        return None
+                
     
 
 e = DLL()
