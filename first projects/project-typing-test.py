@@ -30,7 +30,7 @@ while choose not in texts:
     print('Please enter the number among \n1 for short \n2 for medium \n3 for long')
     choose = input('Enter the number again::')
 print(f"Please type the sentence you saw below::\n{texts[choose]}")
-orginal = texts[choose]
+original = texts[choose]
 
 start = time.time()
 typed = input()
@@ -39,11 +39,11 @@ taken_time = (end -start)/ 60
 
 
 correct = 0
-for a ,b in zip(orginal, typed):
+for a ,b in zip(original, typed):
     if a == b:
         correct += 1
 
-accuracy = correct/len(orginal) * 100
+accuracy = correct/len(original) * 100
         
 wpm = correct/5/taken_time
 
