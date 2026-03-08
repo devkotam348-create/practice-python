@@ -17,3 +17,35 @@
 
 # The application should be built usin gonly standard Python libraries. The user interface will be entirely text-based
 # within the command line
+
+import time
+
+texts = {"1": "The quick brown fox jumps over the lazy dog.",
+         "2": "The quick brown fox jumps over the lazy dog and then quietly walks through the buzzing zoo filled with exotic animals.",
+         "3":"Every morning when the sun slowly rises above the quiet city, a young man walks through the peaceful streets with a cup of warm coffee in his hand, thinking about his dreams, his future, and the many things he still wants to learn in life, because he believes that with patience, discipline, and daily practice anyone can improve their skills, build confidence, and slowly move closer to their goals no matter how difficult the journey may sometimes feel."
+         }
+
+choose = input("Enter  \n1 for short \n2 for medium \n3 for long :::")
+while choose not in texts:
+    print('Please enter the number among \n1 for short \n2 for medium \n3 for long')
+    choose = input('Enter the number again::')
+print(f"Please type the sentence you saw below::\n{texts[choose]}")
+orginal = texts[choose]
+
+start = time.time()
+typed = input()
+end = time.time()
+taken_time = (end -start)/ 60
+
+
+correct = 0
+for a ,b in zip(orginal, typed):
+    if a == b:
+        correct += 1
+
+accuracy = correct/len(orginal) * 100
+        
+wpm = correct/5/taken_time
+
+print(f"your speed is {wpm} word per minute and you have typed {correct} character with {accuracy}% accuracy")
+    
