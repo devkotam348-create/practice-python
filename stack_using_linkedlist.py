@@ -41,17 +41,17 @@ class Stack:
         return self.item_count
     
     
-    
-e = Stack()
-e.push(10)
-e.push(20)
-e.push(30)
+if __name__ == "__main__":    
+    e = Stack()
+    e.push(10)
+    e.push(20)
+    e.push(30)
 
-print(e.size())
-print(e.peek())
-e.pop() 
-print(e.size())
-print(e.peek()) 
+    print(e.size())
+    print(e.peek())
+    e.pop() 
+    print(e.size())
+    print(e.peek()) 
     
 
         
