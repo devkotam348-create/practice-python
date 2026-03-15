@@ -1,9 +1,10 @@
 ##1. define a class stack to implement stack data structure using singly linked list concept. Define __int__() method to initialsize start reference variable and item_count
 ### variable to track of number of items in the stack
 class Node:
-    def __init__(self, item = None, next = None):
+    def __init__(self, item = None, next_node = None):
         self.item = item
-        self.next = next
+        self.next = next_node
+        
 class Stack:
     def __init__(self):
             self.start = None
@@ -15,8 +16,7 @@ class Stack:
         
 ##3. In a stack class, define push() method to add onto the stack:
     def push(self, item):
-        new_node = Node(item)
-        new_node.next = self.start
+        new_node = Node(item,self.start)
         self.start = new_node
         self.item_count += 1
         
