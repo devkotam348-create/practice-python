@@ -8,7 +8,6 @@ class Stack(stack_using_linkedlist.Stack):
 ##3. define a method is_empty() to check if the stack is empty in Stack class
     def is_empty(self):
         return super().is_empty()
-        
 ##4. In stack class define a push() method to add data on a stack 
     def push(self, item):
         super().push(item) 

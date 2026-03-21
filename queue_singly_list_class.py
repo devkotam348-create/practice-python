@@ -9,7 +9,7 @@ class Queue:
         self.front = None
         self.rear = None
         self.count = 0
-    def is_empty(self):
+    def is_empty(self): 
       if self.front is None:
           return True
       return False
