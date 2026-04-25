@@ -1,13 +1,22 @@
-#reverse a number
-def Count(n, reverse = 0):
-    if n == 0:
-        return reverse
-    return Count(n//10, reverse*10 + (n%10))
+if __name__ == "__main__":
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
     
-n = 121
-
-result = Count(121)
-if result == n:
-    print("is palidrome")
-else:
-    print("is not palidrome")
+    result = []
+    for i in range(0, x +1):
+        for j in range (0, y+1):
+            for k in range(0, z+1):
+                if i + j + k != n:
+                    result = result + [[i , j , k]]
+    
+    print(result)
+    
+    output = []
+    output = [[i, j, k]
+              for i in range(0, x+1)
+              for j in range (0, y+1)
+              for k in range (0, z+1)
+              if i + j+ k != n ]
+    print(output)                    
